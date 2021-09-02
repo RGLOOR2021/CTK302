@@ -10,12 +10,11 @@ function setup() {
 }
 
 function draw() {
-background('green');
-image(meshow, width/2, height/2, 100, 100);
+background('blue');
+image(meshow, width/2, height/2, 500, 500);
 image(me3, width/2, height/2 - 120, 100, 100);
-image(me2, width/2, height/2 + 120, 100, 100);
-
+image(me2, width/2, height/2 + 100, 150, 150);
 
 
 }
-//resized so it doesn't stretch
+//changed size
