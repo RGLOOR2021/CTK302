@@ -5,8 +5,8 @@ let f1;
 
 function setup() {
   createCanvas(500, 500, WEBGL);
-  ava = loadImage('avabody1.png');
-  f1 = loadFont("Ellandob.otf");
+  ava = loadImage('assets/avabody1.png');
+  f1 = loadFont("assets/Ellandob.otf");
   imageMode(CENTER);
   ellipseMode(CENTER);
 
