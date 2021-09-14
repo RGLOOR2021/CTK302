@@ -10,7 +10,7 @@ function draw() {
   background(220);
 
   push();
-  translate(x,0);
+  translate(x, 0);
   // everything bellow will move,
   //then use push() and pop() to control
   avatar();
@@ -20,7 +20,7 @@ function draw() {
   //+1 is the speed, x axis
 
   //to make it loop
-  if(x > width) {
+  if (x > width) {
     x = -300;
     //it can start from zero
   }
@@ -28,8 +28,8 @@ function draw() {
 
 }
 
- function avatar() {
-   // rain man body head when not pressed
+function avatar() {
+  // rain man body head when not pressed
   fill('black')
   ellipse(410, 170, 80, 80);
 
@@ -58,4 +58,4 @@ function draw() {
 
 
 
- }
+}
