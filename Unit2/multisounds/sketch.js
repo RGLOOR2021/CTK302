@@ -23,7 +23,7 @@ function draw() {
   switch(state){
     case 0:
     //spawn song 1
-    backgroud('red');
+    background('red');
     song1.play();
     state = 1
     break;
@@ -41,7 +41,7 @@ function draw() {
 
     case 3:
     //listen song 2
-    backgroud('green');
+    background('green');
     break;
 
     case 4:
