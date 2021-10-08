@@ -17,7 +17,7 @@ function preload() {
   song1.pause();
   song2.pause();
   song3.pause();
-  //spanning a song in a loop don't add in the draw function
+
 }
 
 function setup() {
@@ -28,7 +28,6 @@ function setup() {
 function draw() {
   switch (state) {
     case 0:
-      //spawn song 1
       background('red');
       image(img1, 01, 01, 400, 500);
       song1.play();
@@ -40,7 +39,6 @@ function draw() {
 
 
     case 2:
-      //listen song 1
       background('yellow');
       image(img2, 100, 01, 400, 500);
       song2.play();
@@ -52,7 +50,6 @@ function draw() {
 
 
     case 4:
-      //spawn song 2
       background('red');
       image(img3, 150, 01, 400, 500);
       song3.play();
