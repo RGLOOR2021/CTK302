@@ -1,9 +1,11 @@
 let state = 0;
 let timer = 0;
+let img;
 
 function setup() {
   createCanvas(400, 400);
   textAlign(CENTER);
+  img = loadImage("assets/chy.png");
 }
 
 function draw() {
@@ -44,13 +46,18 @@ function draw() {
       text("NEVER STOP", width / 2, height / 2);
       break;
 
+    case 5:
+      background('white');
+      image(img, 0, 1, 400, 300);
+      break;
+
   }
 }
 
 function mouseReleased() {
   state = state + 1;
   //same as state++
-  if (state > 4) {
+  if (state > 5) {
     state = 0;
 
   }
