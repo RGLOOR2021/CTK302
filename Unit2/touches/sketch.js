@@ -13,7 +13,7 @@ function draw() {
   background("pink");
   fill("white");
   numberOfTouches = touches.length;
-  text(numberOfTouches + ' touches', 5, 10);
+  text(numberOfTouches + 'touches', 5, 10);
 
   switch(numberOfTouches) {
     case 0:
@@ -22,19 +22,19 @@ function draw() {
 
       case 1:
        text("I didn't feel that", 10, 50 ) ;
-       image(1, 10, 10, 240, 400);
+       image(img1, 10, 10, 240, 400);
 
       break ;
 
       case 2:
       text("hmmm not yet", 10, 50 ) ;
-      image(1, 10, 10, 240, 400);
+      image(img2, 10, 10, 240, 400);
 
       break ;
 
       case 3:
      text("There you go!", 10, 50) ;
-     image(1, 10, 10, 240, 400);
+     image(img3, 10, 10, 240, 400);
 
       break ;
 
