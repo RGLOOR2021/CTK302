@@ -14,7 +14,7 @@ function setup() {
 function draw() {
   background(c);
 
-  vol = (mic.getLevel().toFixed(2));
+  vol = (mic.getLevel().toFixed(4));
 
   if (vol > .20) {
 
@@ -24,7 +24,7 @@ function draw() {
   textSize(20);
   text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 60);
 
-  rect(vol * 100, 100, 50, 50);
+  rect(vol * 100, 140, 50, 50);
   //   x = map(vol, 0, .2, 0, width) ;
   //   rect(x, 200, 50, 50);
 
