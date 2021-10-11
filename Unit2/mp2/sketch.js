@@ -18,7 +18,8 @@ function draw() {
       background("red");
       //image(ava, 100, 100, 200, 200);
       text("welcome please click on Ava", 100, 100);
-      
+      image(ava, 50, 50, 50, 250);
+
       timer++;
       if (timer > 3 * 60) {
         timer = 0;
@@ -29,6 +30,7 @@ function draw() {
     case 1:
       background("blue");
       text("Ava says: talk to me", 100, 100);
+      image(ava, 50, 50, 50, 250);
       // get the sound input
       vol = (mic.getLevel().toFixed(2));
       if (vol > .1) {
