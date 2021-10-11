@@ -2,26 +2,24 @@ let state = 0;
 let timer = 0;
 let mic;
 let vol;
-let hand, queen;
+let hand, queen, arm;
 let font;
 let song1;
-
-function preload() {
-  song1 = loadSound("assets/dub.mp3");
-}
 
 function setup() {
   createCanvas(700, 750);
   textAlign(CENTER);
   textSize(35);
 
-  // code for initializing mic in.
-  mic = new p5.AudioIn(); // what does "new" mean?
+  mic = new p5.AudioIn();
   mic.start();
 
-  hand = loadImage("assets/hand.png");
-  queen = loadImage("assets/AVA.png");
+  hand = loadImage("assets/handcopy.png");
+  queen = loadImage("assets/AVAcopy.png");
+  arm = loadImage("assets/avaarm2.png");
+
   font = loadFont("assets/font.ttf");
+  song1 = loadSound("assets/dub.mp3");
   //song2.loop();
 }
 
@@ -29,8 +27,6 @@ function draw() {
   textFont(font);
   noStroke();
   background(245, 128, 235);
-
-
 
   switch (state) {
     case 0:
@@ -42,7 +38,7 @@ function draw() {
 
       text("To enter the temple of the\nGREAT EYE\nwait 6 seconds", 350, 250);
       timer++;
-      if (timer > 2 * 60) {
+      if (timer > 6 * 60) {
         timer = 0;
         state = 1;
       }
@@ -53,7 +49,7 @@ function draw() {
       text("talk to the hand\n...loud", 350, 90);
       image(hand, 60, 150, 550, 600);
       vol = (mic.getLevel().toFixed(2));
-      if (vol > .1) {
+      if (vol > .3) {
         state = 2;
       }
       break;
