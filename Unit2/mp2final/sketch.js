@@ -6,6 +6,15 @@ let hand, queen, arm;
 let font;
 let song1;
 
+function preload() {
+  song1 = loadSound("assets/drone.mp3");
+
+  song1.play();
+  song1.pause();
+
+}
+
+
 function setup() {
   createCanvas(700, 750);
   textAlign(CENTER);
@@ -19,7 +28,6 @@ function setup() {
   arm = loadImage("assets/avaarm2.png");
 
   font = loadFont("assets/font.ttf");
-  song1 = loadSound("assets/dub.mp3");
   //song2.loop();
 }
 
@@ -36,9 +44,9 @@ function draw() {
       fill("white");
       ellipse(350, 510, 10, 10);
 
-      text("To enter the temple of the\nGREAT EYE\nwait 6 seconds", 350, 250);
+      text("To enter the temple of the\nGREAT EYE\nwait 4 seconds", 350, 250);
       timer++;
-      if (timer > 6 * 60) {
+      if (timer > 4 * 60) {
         timer = 0;
         state = 1;
       }
@@ -69,9 +77,10 @@ function draw() {
 
 
       image(queen, 50, 250, 150, 450);
-      text("click on the door and\nQueen AVA will open for you", 350, 50);
+      image(arm, 75, 260, 50, 150);
+      text("Queen AVA will open the door for you", 350, 50);
       timer++;
-      if (timer > 560) {
+      if (timer > 8 * 60) {
         timer = 0;
         state = 3;
       }
@@ -128,10 +137,11 @@ function draw() {
       song1.play();
 
       timer++;
-      if (timer > 8 * 60) {
+      if (timer > 5 * 60) {
         timer = 0;
         state = 0;
       }
+      break;
 
   }
 
@@ -144,6 +154,16 @@ function mouseReleased() {
     state = 1;
 
   }
+}
+
+function mouseReleased() {
+  song1.pause();
+
+  state++;
+  if (state > 3) {
+    state = 0;
+  }
+
 }
 
 function touchStarted() {
