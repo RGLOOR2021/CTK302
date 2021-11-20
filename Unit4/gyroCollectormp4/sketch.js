@@ -42,9 +42,9 @@ function setup() {
 
 function draw() {
 
-  background("black"); // light blue
+  //background("black"); // light blue
   //image(img1, 1, 1, windowWidth, windowHeight);
-  //image(img1, 1, 1, 3, 3);
+  image(img1, 1, 1, 3, 3);
 
 
   // the map command !!!!
@@ -60,7 +60,7 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(img1, 0, 0, 500, 500);
+  //image(img1, 0, 0, 500, 500);
   //fill('green');
   //ellipse(0, 0, 80, 80);
   pop();
@@ -88,20 +88,20 @@ function draw() {
 
   // Debugging information -- take this out when you're ready for production!
   // Just a bunch of text commands to display data coming in from addEventListeners
-  //textAlign(LEFT);
-  //textSize(20);
-  //fill('black');
-  //text("orientation data:", 25, 25);
-  //textSize(15);
-  //text("alpha: " + alpha, 25, 50);
-  //text("beta: " + beta, 25, 70);
-  //text("gamma: " + gamma, 25, 90);
-  //textSize(20);
-  //text("acceleration data:", 25, 125);
-  //textSize(15);
-  //text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
-  //text("y = " + y, 25, 170);
-  //text("z = " + z, 25, 190);
+  textAlign(LEFT);
+  textSize(20);
+  fill('black');
+  text("orientation data:", 25, 25);
+  textSize(15);
+  text("alpha: " + alpha, 25, 50);
+  text("beta: " + beta, 25, 70);
+  text("gamma: " + gamma, 25, 90);
+  textSize(20);
+  text("acceleration data:", 25, 125);
+  textSize(15);
+  text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
+  text("y = " + y, 25, 170);
+  text("z = " + z, 25, 190);
   //it can be comment production
 
 
@@ -143,9 +143,9 @@ function Car() {
   // attributes
   this.pos = createVector(100, 100);
   this.vel = createVector(random(-5, 5), random(-5, 5))
-  if (random(2) > 1){
+  if (random(2) > 1) {
     this.image = img1;
-  }else{
+  } else {
     this.image = img2;
   }
   //this.r = random(255);
