@@ -9,8 +9,8 @@ let song1;
 function preload() {
   song1 = loadSound("assets/drone.mp3");
 
-  song1.play();
-  song1.pause();
+  //song1.play();
+  //song1.pause();
 
 }
 
@@ -77,8 +77,8 @@ function draw() {
 
 
       image(queen, 50, 250, 150, 450);
-      image(arm, 75, 260, 50, 150);
-      text("Queen AVA will open the door for you", 350, 50);
+      image(arm, 200, 260, 80, 150);
+      text("Queen Ava will open the door for you", 350, 50);
       timer++;
       if (timer > 8 * 60) {
         timer = 0;
@@ -137,7 +137,7 @@ function draw() {
       song1.play();
 
       timer++;
-      if (timer > 5 * 60) {
+      if (timer > 10 * 60) {
         timer = 0;
         state = 0;
       }
@@ -153,18 +153,15 @@ function mouseReleased() {
   if ((state == 0) && (mouseX > 200) && (mouseX < 350) && (mouseY > 200) && (mouseY < 350)) {
     state = 1;
 
+    song1.pause();
+
+    state++;
+    if (state > 3) {
+      state = 0;
+    }
   }
 }
 
-function mouseReleased() {
-  song1.pause();
-
-  state++;
-  if (state > 3) {
-    state = 0;
-  }
-
-}
 
 function touchStarted() {
   getAudioContext().resume();
