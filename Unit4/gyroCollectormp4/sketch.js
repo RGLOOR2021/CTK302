@@ -68,7 +68,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("stop\n \nlook to the sky\n \ntake a deep breath", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("stop\n \nlook to the sky\n \breathe in breath out", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
 
