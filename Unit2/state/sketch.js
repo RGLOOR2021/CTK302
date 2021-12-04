@@ -3,7 +3,7 @@ let timer = 0;
 let img;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(WindowWidth, WindowHeight);
   textAlign(CENTER);
   img = loadImage("assets/chy.png");
 }
