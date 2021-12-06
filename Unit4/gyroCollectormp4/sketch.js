@@ -9,7 +9,7 @@ let img1, img2;
 let font;
 
 var cars = [];
-var frogPos;
+//var frogPos;
 
 
 function setup() {
@@ -28,7 +28,7 @@ function setup() {
     cars.push(new Car());
   }
 
-  frogPos = createVector(width / 2, height - 80);
+  //frogPos = createVector(width / 2, height - 80);
 
   imageMode(CENTER);
   rectMode(CENTER);
@@ -39,21 +39,26 @@ function draw() {
 
   background("pink");
   textFont(font);
+  fill('white');
+  textSize(40);
+  textAlign(CENTER);
+  text("stop\n \nlook to the sky\n \breathe in breath out", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
-  xPosition = map(gamma, -18, 18, 0, width);
-  yPosition = map(beta, 25, 45, 0, height);
+
+  //xPosition = map(gamma, -18, 18, 0, width);
+  //yPosition = map(beta, 25, 45, 0, height);
 
 //FROG
-  push();
-  translate(xPosition, yPosition);
+  //push();
+  //translate(xPosition, yPosition);
 
-  fill('green');
-  ellipse(100, 100, 180, 180);
-  pop();
+  //fill('green');
+  //ellipse(100, 100, 180, 180);
+  //pop();
 
-  frogPos.x = xPosition;
-  frogPos.y = yPosition;
+  //frogPos.x = xPosition;
+  //frogPos.y = yPosition;
 
 
   for (var i = 0; i < cars.length; i++) {
@@ -64,28 +69,6 @@ function draw() {
     }
   }
 
-
-  fill('white');
-  textSize(40);
-  textAlign(CENTER);
-  text("stop\n \nlook to the sky\n \breathe in breath out", width / 2, 600, windowWidth - 200, windowHeight - 200);
-
-
-
-  textAlign(RIGHT);
-  textSize(20);
-  fill('black');
-  text("orientation data:", 475, 25);
-  textSize(15);
-  text("alpha: " + alpha, 500, 50);
-  text("beta: " + beta, 498, 70);
-  text("gamma: " + gamma, 500, 90);
-  textSize(20);
-  text("acceleration data:", 500, 125);
-  textSize(15);
-  text("x = " + x, 525, 150);
-  text("y = " + y, 525, 170);
-  text("z = " + z, 525, 190);
 
 
 }
@@ -113,7 +96,7 @@ window.addEventListener('devicemotion', function(e) {
 
 function Car() {
 
-  this.pos = createVector(100, 100);
+  this.pos = createVector(random(5, 200), 100);
   this.vel = createVector(random(-5, 5), random(-5, 5))
   if (random(2) > 1) {
     this.image = img1;
