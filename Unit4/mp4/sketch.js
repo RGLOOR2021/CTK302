@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  //background(img1, windowWidth, windowHeight);
+  background(0);
 
 
   ambientLight(180);
