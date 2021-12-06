@@ -1,5 +1,5 @@
-let img;
-//let = img1;
+let = img1; img;
+
 
 function preload() {
   img = loadImage('assets/zw1.jpg');
